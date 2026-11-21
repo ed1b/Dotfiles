@@ -1,0 +1,28 @@
+# Dracula Theme for GNU nano
+
+# Interface colors (Dracula palette)
+set titlecolor black,purple
+set statuscolor black,green
+set errorcolor bold,white,red
+set selectedcolor white,magenta
+set numbercolor cyan
+set keycolor bold,cyan
+set functioncolor white
+set promptcolor bold,green
+set minicolor purple
+set stripecolor yellow
+set scrollercolor purple
+
+# Default fallback syntax highlighting (Dracula colors)
+syntax default
+color red "^[[:space:]]*#.*$"
+color magenta "\<[A-Za-z_][A-Za-z0-9_]*[[:space:]]*\("
+color cyan "\<[A-Za-z0-9._%+-]\+@[A-Za-z0-9.-]\+\.[A-Za-z]{2,}\>"
+color green "\<(true|false|yes|no)\>"
+color yellow "\<(TODO|FIXME|NOTE)\>"
+color purple "\<[A-Z][A-Za-z0-9_]*\>"
+color yellow "\"[^\"]*\""
+color blue "^[[:space:]]*//.*$"
+
+# Include standard language syntax highlighting definitions from Homebrew
+include "/opt/homebrew/share/nano/*.nanorc"

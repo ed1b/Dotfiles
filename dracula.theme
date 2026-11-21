@@ -1,0 +1,81 @@
+# Dracula theme for Irssi
+# Optimized for Dracula terminal color palette
+
+default_color = "-1";
+info_eol = "false";
+replaces = { "[]=" = "%K$*%n"; };
+
+abstracts = {
+  # Generic
+  line_start = "%B-%n!%B-%n ";
+  timestamp = "%K$*%n";
+  hilight = "%_$*%_";
+  error = "%R$*%n";
+  warning = "%Y$*%n";
+  channel = "%_$*%_";
+  nick = "%_$*%_";
+  nickhost = "[$*]";
+  server = "%_$*%_";
+  comment = "[$*]";
+  reason = "{comment $*}";
+  mode = "{comment $*}";
+
+  # Channel specific messages
+  channick_hilight = "%C$*%n";
+  chanhost_hilight = "{nickhost %c$*%n}";
+  channick = "%c$*%n";
+  chanhost = "{nickhost $*}";
+  channelhilight = "%c$*%n";
+  ban = "%c$*%n";
+
+  # Messages
+  msgnick = "%K<%n$0$1-%K>%n %|";
+  ownmsgnick = "{msgnick $0 $1-}";
+  ownnick = "%Y$*%n";
+  pubmsgnick = "{msgnick $0 $1-}";
+  pubnick = "%N$*%n";
+  pubmsgmenick = "{msgnick $0 $1-}";
+  menick = "%Y$*%n";
+  pubmsghinick = "{msgnick $1 $0$2-%n}";
+  msgchannel = "%K:%c$*%n";
+
+  # Statusbar styling
+  # %4 provides the Dracula purple/pink background.
+  # %K sets default text to dark grey.
+  sb_background = "%4%K";
+  window_border = "%4%K";
+  sb_default_bg = "%4";
+  sb_prompt_bg = "%n";
+  sb_info_bg = "%8";
+  sb_topic_bg = "%4";
+
+  sbstart = "";
+  sbend = " ";
+  topicsbstart = "{sbstart $*}";
+  topicsbend = "{sbend $*}";
+  prompt = "%Y[%K$*%Y]%n ";
+
+  # Statusbar items:
+  # - Brackets and parentheses in yellow (%Y)
+  # - Content (nick, irc network, channel name, window, time) in dark grey (%K)
+  # - Nick mode prefix in green (%g)
+  # - Mode plus sign in red (%r), mode letters in dark grey (%K)
+  # - Away indicator in bold green (%G)
+  # - Server tag separator in yellow (%Y)
+  sb = " %Y[%K$*%Y]%n";
+  sbmode = "%Y(%r+%K$*%Y)%n";
+  sbaway = " %Y(%GzZzZ%Y)%n";
+  sbservertag = ":%Y$0%K";
+  sbnickmode = "%g$0%K";
+
+  # Activity in statusbar:
+  # - Separator in yellow (%Y)
+  # - Inactive window numbers in dark grey (%K)
+  # - Windows with new messages in red (%r)
+  # - Windows with mentions/hilights in bold red (%R%_)
+  sb_act_sep = "%Y$*";
+  sb_act_text = "%K$*";
+  sb_act_msg = "%r$*";
+  sb_act_hilight = "%R%_$*%_%n";
+  sb_act_hilight_color = "$0$1-%n";
+};
