@@ -1,0 +1,13 @@
+# Styling & Theme Guidelines
+- Dracula Theme: When rendering charts, generative UI widgets, diagrams (Mermaid), or styled HTML artifacts, use the official Dracula color palette:
+  - Background: #282a36
+  - Current Line / Selection: #44475a
+  - Foreground: #f8f8f2
+  - Comment / Muted: #6272a4
+  - Cyan: #8be9fd
+  - Green: #50fa7b
+  - Orange: #ffb86c
+  - Pink: #ff79c6
+  - Purple: #bd93f9
+  - Red: #ff5555
+  - Yellow: #f1fa8c

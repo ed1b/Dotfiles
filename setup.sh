@@ -192,7 +192,22 @@ if [ -f "$DOTFILES_DIR/firefox/dracula-dark-theme.xpi" ]; then
 fi
 
 # ------------------------------------------------------------------------------
-# 8. Verification
+# 8. Google Antigravity / Gemini CLI
+# ------------------------------------------------------------------------------
+info "Setting up Google Antigravity / Gemini CLI Dracula guidelines..."
+
+if [ -f "$DOTFILES_DIR/GEMINI.md" ]; then
+    mkdir -p "$HOME/.gemini/config"
+    if [ -f "$HOME/.gemini/config/GEMINI.md" ] && [ ! -L "$HOME/.gemini/config/GEMINI.md" ]; then
+        backup_if_exists "$HOME/.gemini/config/GEMINI.md"
+    fi
+    ln -sfn "$DOTFILES_DIR/GEMINI.md" "$HOME/.gemini/config/GEMINI.md"
+    ln -sfn "$DOTFILES_DIR/GEMINI.md" "$HOME/.gemini/config/AGENTS.md"
+    ok "Antigravity / Gemini Dracula config linked to ~/.gemini/config/GEMINI.md"
+fi
+
+# ------------------------------------------------------------------------------
+# 9. Verification
 # ------------------------------------------------------------------------------
 echo ""
 echo "=============================================================================="

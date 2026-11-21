@@ -13,6 +13,7 @@ A cohesive, automated [Dracula Theme](https://draculatheme.com) environment for 
 - **GNU Nano**: Full Dracula syntax highlighting rules and interface palette.
 - **Irssi**: Matching Dracula IRC client theme and configuration.
 - **Firefox**: Bundled Dracula Dark Theme add-on (`.xpi`).
+- **Antigravity / Gemini**: Dracula palette rules for charts, Mermaid diagrams, and UI artifacts (`GEMINI.md`).
 
 ---
 
@@ -59,6 +60,7 @@ Run the built-in test script to verify your Zsh and Oh My Zsh Dracula configurat
 ├── .vimrc                     # Vim configuration with Dracula plugin
 ├── .zshrc                     # Zsh configuration (Dracula theme, LSCOLORS)
 ├── Dracula.terminal           # Apple Terminal Dracula color scheme
+├── GEMINI.md                  # Antigravity & Gemini Dracula theme rules
 ├── dracula.zsh-theme          # Oh My Zsh Dracula theme file
 ├── dracula.theme              # Irssi Dracula theme
 ├── check_zshrc_dracula.sh     # Health-check script for shell configuration
