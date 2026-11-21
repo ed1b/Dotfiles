@@ -2,6 +2,11 @@
 
 A cohesive, automated [Dracula Theme](https://draculatheme.com) environment for macOS, shell, editors, and CLI tools.
 
+<p align="center">
+  <img src="screenshot-desktop.png" width="49%" alt="Dracula macOS Desktop" />
+  <img src="screenshot-terminal.png" width="49%" alt="Dracula Terminal and Apps" />
+</p>
+
 ---
 
 ## ✨ Features
@@ -66,6 +71,8 @@ Run the built-in test script to verify your Zsh and Oh My Zsh Dracula configurat
 ├── check_zshrc_dracula.sh     # Health-check script for shell configuration
 ├── setup.sh                   # Main automated installation & backup script
 ├── macos-dracula-settings.sh  # Standalone macOS UI appearance script
+├── screenshot-desktop.png     # macOS Desktop preview screenshot
+├── screenshot-terminal.png    # Terminal & apps preview screenshot
 ├── firefox/                   # Firefox Dracula extension (.xpi)
 ├── irssi/                     # Irssi configuration files
 └── wallpapers/                # Dracula macOS desktop wallpapers
