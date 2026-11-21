@@ -22,12 +22,29 @@ A cohesive, automated [Dracula Theme](https://draculatheme.com) environment for 
 
 ---
 
+## 📋 Prerequisites
+
+Before installing, ensure you have:
+- **macOS** (macOS 10.15 Catalina or newer recommended)
+- **Xcode Command Line Tools** (for Git and developer tools):
+  ```bash
+  xcode-select --install
+  ```
+- **Zsh** (macOS default shell)
+
+---
+
 ## 🚀 Quick Start
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/Dotfiles.git ~/Developer/Dotfiles
+# Via HTTPS
+git clone https://github.com/ed1b/Dotfiles.git ~/Developer/Dotfiles
+
+# Or via SSH
+git clone git@github.com:ed1b/Dotfiles.git ~/Developer/Dotfiles
+
 cd ~/Developer/Dotfiles
 ```
 
@@ -38,7 +55,8 @@ chmod +x setup.sh
 ./setup.sh
 ```
 
-> **Note:** The script automatically creates timestamped backups (e.g., `~/.zshrc.backup_<timestamp>`) before modifying existing configuration files.
+> [!NOTE]
+> The script automatically creates timestamped backups (e.g., `~/.zshrc.backup_<timestamp>`) before modifying any existing configuration files.
 
 ### 3. Reload your environment
 
@@ -46,15 +64,39 @@ chmod +x setup.sh
 source ~/.zshrc
 ```
 
+> [!TIP]
+> Open a new terminal window or restart **Terminal.app** to see the new Dracula window settings and colors in action.
+
+---
+
+## 🖥️ Standalone macOS Appearance (Optional)
+
+If you only want to apply the macOS system appearance (Dark Mode, Purple accent color, and desktop wallpaper) without modifying your shell or editor dotfiles, run:
+
+```bash
+chmod +x macos-dracula-settings.sh
+./macos-dracula-settings.sh
+```
+
 ---
 
 ## 🔍 Verification
 
-Run the built-in test script to verify your Zsh and Oh My Zsh Dracula configuration:
+Run the built-in health-check script to verify your Zsh and Oh My Zsh Dracula configuration:
 
 ```bash
 ./check_zshrc_dracula.sh
 ```
+
+The script verifies:
+1. `~/.zshrc` exists and is configured.
+2. `ZSH_THEME="dracula"` is set.
+3. The Dracula Oh My Zsh theme file is reachable.
+4. Sourcing `~/.zshrc` produces no syntax or loading errors.
+5. Loaded theme matches `dracula`.
+6. Theme prompt color definitions (magenta / `#bd93f9`).
+7. Git plugin is loaded in `.zshrc`.
+8. Git plugin script file is present in Oh My Zsh plugins.
 
 ---
 
@@ -74,8 +116,13 @@ Run the built-in test script to verify your Zsh and Oh My Zsh Dracula configurat
 ├── screenshot-desktop.png     # macOS Desktop preview screenshot
 ├── screenshot-terminal.png    # Terminal & apps preview screenshot
 ├── firefox/                   # Firefox Dracula extension (.xpi)
-├── irssi/                     # Irssi configuration files
+│   └── dracula-dark-theme.xpi
+├── irssi/                     # Irssi configuration & theme
+│   ├── config
+│   └── dracula.theme
 └── wallpapers/                # Dracula macOS desktop wallpapers
+    ├── Dracula-base.png
+    └── Dracula-macos.png
 ```
 
 ---
@@ -87,6 +134,8 @@ To apply the Dracula theme to Firefox:
 ```bash
 open -a Firefox "firefox/dracula-dark-theme.xpi"
 ```
+
+You can also drag and drop `firefox/dracula-dark-theme.xpi` into an open Firefox browser window.
 
 ---
 

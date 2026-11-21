@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+ZSH="${ZSH:-$HOME/.oh-my-zsh}"
+
 # Helper functions with proper colour handling (using printf)
 status() { printf '\e[32m[OK]\e[0m %s\n' "$*"; }
 fail()   { printf '\e[31m[FAIL]\e[0m %s\n' "$*"; exit 1; }
